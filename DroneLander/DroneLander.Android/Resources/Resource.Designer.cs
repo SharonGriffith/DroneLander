@@ -9,7 +9,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-[assembly: global::Android.Runtime.ResourceDesignerAttribute("DroneLander.Droid.Resources", IsApplication=true)]
+[assembly: global::Android.Runtime.ResourceDesignerAttribute("DroneLander.Droid.Resource", IsApplication=true)]
 
 namespace DroneLander.Droid
 {

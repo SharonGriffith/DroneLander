@@ -118,7 +118,7 @@
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </AndroidAsset>
     <None Include="packages.config" />
-    <AndroidResource Include="Resources\AboutResources.txt" />
+    <EmbeddedResource Include="Resources\AboutResources.txt" />
     <None Include="Assets\AboutAssets.txt" />
   </ItemGroup>
   <ItemGroup>
