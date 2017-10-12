@@ -22,5 +22,26 @@ namespace DroneLander.Helpers
             }
             catch { }
         }
+
+
+        public static async void SendTelemetryAsync(string userId, double altitude, double descentRate, double fuelRemaining, double thrust)
+        {
+            TelemetryItem telemetry = new TelemetryItem()
+            {
+                Altitude = altitude,
+                DescentRate = descentRate,
+                Fuel = fuelRemaining,
+                Thrust = thrust,
+                Tagline = Common.TelemetryConstants.Tagline,
+                DisplayName = Common.TelemetryConstants.DisplayName,
+                UserId = userId,
+            };
+
+            try
+            {
+                await TelemetryManager.DefaultManager.CurrentClient.InvokeApiAsync("telemetry", JToken.FromObject(telemetry));
+            }
+            catch { }
+        }
     }
 }
