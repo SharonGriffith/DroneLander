@@ -42,8 +42,10 @@
     <Compile Include="Common\CoreConverters.cs" />
     <Compile Include="Common\ObservableBase.cs" />
     <Compile Include="Common\RelayCommand.cs" />
+    <Compile Include="Data\ActivityItem.cs" />
     <Compile Include="Data\TelemetryManager.cs" />
     <Compile Include="Effects\DigitalFontEffect.cs" />
+    <Compile Include="Helpers\ActivityHelper.cs" />
     <Compile Include="Helpers\AudioHelper.cs" />
     <Compile Include="MainPage.xaml.cs">
       <DependentUpon>MainPage.xaml</DependentUpon>
@@ -52,6 +54,9 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Services\IAudioService.cs" />
     <Compile Include="Services\IAuthenticationService.cs" />
+    <Compile Include="ViewActivityPage.xaml.cs">
+      <DependentUpon>ViewActivityPage.xaml</DependentUpon>
+    </Compile>
     <Compile Include="ViewModels\MainViewModel.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -93,7 +98,12 @@
   <ItemGroup>
     <None Include="packages.config" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <EmbeddedResource Include="ViewActivityPage.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\Portable\$(TargetFrameworkVersion)\Microsoft.Portable.CSharp.targets" />
   <Import Project="..\..\packages\Xamarin.Forms.2.3.4.247\build\portable-win+net45+wp80+win81+wpa81+MonoAndroid10+Xamarin.iOS10+xamarinmac20\Xamarin.Forms.targets" Condition="Exists('..\..\packages\Xamarin.Forms.2.3.4.247\build\portable-win+net45+wp80+win81+wpa81+MonoAndroid10+Xamarin.iOS10+xamarinmac20\Xamarin.Forms.targets')" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
